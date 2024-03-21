@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {% block cotent %}
+        <form action="update/{{result.id}}" method="post">
+            {% csrf_token %}
+            <label for="">First name:</label>
+            <input type="text" name="name" value="{{result.name}}"><br>
+            <label for="">age</label>
+            <input type="number" name="age" value="{{result.age}}"><br>
+            <label for="">email</label>
+            <input type="email" name="email" value="{{result.email}}"><br>
+            <label for="">password</label>
+            <input type="password" name="password" value="{{result.password}}"><br>
+            <input type="submit" name="submit" ><br>
+            <a href="viewuser">view page</a>
+        </form>
+        {% endblock %}
+    </center>
+</body>
+</html>
